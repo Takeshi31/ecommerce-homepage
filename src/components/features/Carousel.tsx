@@ -54,6 +54,8 @@ const Carousel = ({ images }: { images: IProduct[]}) => {
     btn.dataset.button == 'button-prev' ? prevAction(leftPosition, cardWidth, imageContainer!) : nextAction(leftPosition, imageContainerWidth, listWidth, cardWidth, imageContainer!)
   }
 
+  //@TODO: Componentizar para individualizar responsabilidades
+
   return (
     <div className='carousel'>  
       <div className='carousel-list'>
