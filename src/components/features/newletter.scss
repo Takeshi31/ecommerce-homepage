@@ -1,0 +1,82 @@
+.newletter {
+  background-color: #D2F2FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  overflow: hidden;
+  padding: 15%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    bottom: 71.75%;
+    color: #444950;
+    font-family: 'Abhaya Libre';
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    left: 23.75%;
+    line-height: 80%;
+    margin-bottom: 20px;
+    right: 23.68%;
+    text-align: center;
+    top: 19.52%;
+  }
+
+  .newletter-single {
+    bottom: 60.26%;
+    color: #939393;
+    font-family: 'Filson Pro';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 350;
+    left: 35.14%;
+    line-height: 80%;
+    margin-bottom: 20px;
+    right: 34.31%;
+    text-align: center;
+    top: 34.39%;
+  }
+
+  .submit-group {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  input {
+    background: #FFFFFF;
+    border: 1px solid #EFA693;
+    border-radius: 100px;
+    bottom: 52.73%;
+    box-sizing: border-box;
+    left: 33.68%;
+    margin-right: 10px;
+    min-height: 48px;
+    right: 41.32%;
+    top: 42.52%;
+  }
+
+  button.button-submit {
+    background: #EFA693;
+    border: 1px solid #EFA693;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    flex: none;
+    flex-grow: 0;
+    font-size: 16px;
+    gap: 8px;
+    height: 48px;
+    min-height: 48px;
+    opacity: 0.9;
+    order: 0;
+    padding: 12px 20px;
+    width: 119px;
+  }
+}
