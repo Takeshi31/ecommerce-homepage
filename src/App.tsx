@@ -12,9 +12,9 @@ function App() {
       <section>
         <Products></Products>
         <Newsletter></Newsletter>
-      </section>
+      </section>  
       <footer>
-        <p>Derechos reservados © 2023</p>
+        <span className={'footer-text'}>Derechos reservados © 2023</span>
       </footer>
     </main>
   );

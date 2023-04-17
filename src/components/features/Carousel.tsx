@@ -1,8 +1,9 @@
-import { MouseEvent } from 'react'
+import { MouseEvent, useState } from 'react'
 
 import { IProduct } from '../../interfaces/product.interface'
 import StarRating from './StarRating'
 import './carousel.scss'
+import Toast from './Toast'
 
 let prevAction = (leftPosition: number, cardWidth: number, imageContainer: Element) => {
   if(leftPosition > 0) {
@@ -17,6 +18,20 @@ let nextAction = (leftPosition: number, imageContainerWidth: number, listWidth: 
 }
 
 const Carousel = ({ images }: { images: IProduct[]}) => {
+  const message = 'Added to cart'
+  const [showToast, setShowToast] = useState(false);
+
+  const handleShowToast = () => {
+    setShowToast(true);
+
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
+
+  const handleCloseToast = () => {
+    setShowToast(false);
+  };
 
   const slide = (event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     const btn = event.currentTarget
@@ -49,7 +64,12 @@ const Carousel = ({ images }: { images: IProduct[]}) => {
           {images.map((image, i) => (
             <div key={i} className={'card'}>
               <div>
-                <button className={'btn-secondary-inverse'}><span className={'text-button'}>Hola</span></button>
+                <button className={'btn-secondary-inverse'} onClick={handleShowToast}>
+                  <span className={'text-button'}>ADD TO CART</span>
+                </button>
+                {showToast && (
+                  <Toast message={message} onClose={handleCloseToast} />
+                )}
                 <picture>
                   <img src={`${image.featuredImage.url}`} alt={image.title} />
                 </picture>

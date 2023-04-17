@@ -57,6 +57,7 @@
     left: 33.68%;
     margin-right: 10px;
     min-height: 48px;
+    padding: 15px;
     right: 41.32%;
     top: 42.52%;
   }
@@ -78,5 +79,9 @@
     order: 0;
     padding: 12px 20px;
     width: 119px;
+  }
+
+  #email.invalid {
+    background: rgb(255, 133, 133);
   }
 }
