@@ -1,0 +1,33 @@
+.toast {
+  position: fixed;
+  top: 70px;
+  right: 10%;
+  max-width: 300px;
+  background-color: #A5E5FF;
+  color: #939393;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.toast-message {
+  margin-bottom: 5px;
+}
+
+.toast-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  font-size: 16px;
+  cursor: pointer;
+}
