@@ -1,0 +1,58 @@
+.rating-line {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+
+  .average {
+    display: inline-block;
+
+    @extend .font-style;
+  }
+
+  .font-style {
+    color: #939393;
+    font-family: 'Filson Pro';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    &.bold {
+      color: #444950;
+      font-weight: 500;
+    }
+
+    &.line-through {
+      text-decoration-line: line-through;
+    }
+  }
+
+  .sale-price {
+    display: inline;
+    font-size: 15px;
+    position: relative;
+
+    @extend .font-style;
+    @extend .bold;
+  }
+
+  .start {
+    display: inline-block;
+  }
+
+  .start-color {
+    color: #FFC658;
+  }
+
+  .text-line-through {
+    display: inline;
+    font-size: 15px;
+    margin-right: 8px;
+    position: relative;
+    text-align: right;
+
+    @extend .font-style;
+    @extend .line-through;
+  }
+}
